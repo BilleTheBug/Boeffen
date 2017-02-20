@@ -7,12 +7,25 @@ import {User} from "./user";
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
+  newusername: string;
+  newpassword: string;
   users: User[];
   constructor() {
-    this.users = [
-      {username: 'Bille', password: '1234'},
-      {username: 'Greis', password: '1234'}
-    ];
+
+    this.users = JSON.parse(localStorage.getItem("users"));
+    if(this.users == null)
+    {
+this.users = [];
+    }
+  }
+
+  CreateUser()
+  {
+    let user = new User();
+    user.username = this.newusername;
+    user.password = this.newpassword;
+    this.users.push(user);
+    localStorage.setItem("users", JSON.stringify(this.users));
   }
 
   ngOnInit() {

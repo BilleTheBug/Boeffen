@@ -1,5 +1,15 @@
-<ul>
-  <li *ngFor="let user of users">
-    {{user.username}}
-  </li>
-</ul>
+<md-input-container>
+  <input mdInput placeholder="Enter name"
+  [(ngModel)]="newusername">
+</md-input-container>
+<md-input-container>
+  <input mdInput placeholder="Enter password"
+         [(ngModel)]="newpassword">
+</md-input-container>
+<button (click)="CreateUser()"></button>
+
+  <md-card *ngFor="let user of users">
+    <h1 style="color: brown">{{user.username}}</h1>
+    <h3>{{user.password}}</h3>
+  </md-card>
+

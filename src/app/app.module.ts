@@ -5,17 +5,32 @@ import { HttpModule } from '@angular/http';
 import {MaterialModule} from '@angular/material';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
+import {Routes, RouterModule} from "@angular/router";
+import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { HomeComponent } from './home/home.component';
+
+
+const routes: Routes = [
+  { path: 'users', component: UsersComponent},
+  {path: 'home', component: HomeComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
+    ToolbarComponent,
+    HomeComponent
   ],
   imports: [
+
     MaterialModule,
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes),
+    Angular2FontawesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

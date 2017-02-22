@@ -3,13 +3,19 @@
   [(ngModel)]="newusername">
 </md-input-container>
 <md-input-container>
-  <input mdInput placeholder="Enter password"
+  <input mdInput type="password" placeholder="Enter password"
          [(ngModel)]="newpassword">
 </md-input-container>
-<button (click)="CreateUser()"></button>
-
+<fa [name]="'rocket'" [rotate]=270></fa>
+<button (click)="CreateUser()">
+  Add User
+</button>
+<button (click)="ClearUsers()">
+  Clear
+</button>
+<fa [name]="'rocket'"></fa>
   <md-card *ngFor="let user of users">
-    <h1 style="color: brown">{{user.username}}</h1>
-    <h3>{{user.password}}</h3>
+    <h1 style="color: brown"><fa [name]="'user'"></fa>{{user.username}}</h1>
   </md-card>
+
 

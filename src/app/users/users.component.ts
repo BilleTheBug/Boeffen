@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {User} from "./user";
 
 @Component({
-  selector: 'app-users',
+  selector: 'bf-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css']
 })
@@ -26,6 +26,14 @@ this.users = [];
     user.password = this.newpassword;
     this.users.push(user);
     localStorage.setItem("users", JSON.stringify(this.users));
+    this.newusername = null;
+    this.newpassword = null;
+  }
+
+  ClearUsers()
+  {
+    this.users = [];
+    localStorage.removeItem("users");
   }
 
   ngOnInit() {

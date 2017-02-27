@@ -11,9 +11,9 @@ import {Routes, RouterModule} from "@angular/router";
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
 import {HomeComponent} from "./home/home.component";
 import { MenuViewComponent } from './menu/menu-view.component';
-import { CreateComponent } from './CRUDViews/create/create.component';
-import { DeleteComponent } from './CRUDViews/delete/delete.component';
-import { EditComponent } from './CRUDViews/edit/edit.component';
+import { CreateComponent } from './menu/CRUDViews/create/create.component';
+import { DeleteComponent } from './menu/CRUDViews/delete/delete.component';
+import { EditComponent } from './menu/CRUDViews/edit/edit.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 const routes: Routes = [

@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'bf-delete',
-  templateUrl: 'delete.component.html',
-  styleUrls: ['delete.component.css']
+  templateUrl: 'delete.component.html'
 })
 export class DeleteComponent implements OnInit {
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MenuItem} from "./menu-item";
 
 @Component({
   selector: 'bf-menu',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  menu: MenuItem[];
   constructor() { }
 
   ngOnInit() {

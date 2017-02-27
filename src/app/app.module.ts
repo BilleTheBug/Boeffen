@@ -6,14 +6,14 @@ import {MaterialModule} from '@angular/material';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
-import { MenuComponent } from './menu/menu.component';
+import { MenuComponent } from './menu/view/menu.component';
 import {Routes, RouterModule} from "@angular/router";
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
 import {HomeComponent} from "./home/home.component";
-import { MenuViewComponent } from './menu/menu-view.component';
-import { CreateComponent } from './menu/CRUDViews/create/create.component';
-import { DeleteComponent } from './menu/CRUDViews/delete/delete.component';
-import { EditComponent } from './menu/CRUDViews/edit/edit.component';
+import { MenuViewComponent } from './menu/view/menu-view.component';
+import { CreateComponent } from './menu/create/create.component';
+import { DeleteComponent } from './menu/delete/delete.component';
+import { EditComponent } from './menu/edit/edit.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 const routes: Routes = [

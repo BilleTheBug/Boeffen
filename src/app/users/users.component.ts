@@ -7,30 +7,26 @@ import {User} from "./user";
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  newusername: string;
-  newpassword: string;
+  iconName: string = 'user';
+  newUser: User;
   users: User[];
   constructor() {
-
+    this.newUser = new User();
     this.users = JSON.parse(localStorage.getItem("users"));
     if(this.users == null)
     {
-this.users = [];
+      this.users = [];
     }
   }
 
-  CreateUser()
+  createUser()
   {
-    let user = new User();
-    user.username = this.newusername;
-    user.password = this.newpassword;
-    this.users.push(user);
+    this.users.push(this.newUser);
     localStorage.setItem("users", JSON.stringify(this.users));
-    this.newusername = null;
-    this.newpassword = null;
+    this.newUser = new User();
   }
 
-  ClearUsers()
+  clearUsers()
   {
     this.users = [];
     localStorage.removeItem("users");

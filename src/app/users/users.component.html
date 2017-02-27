@@ -1,21 +1,24 @@
-<md-input-container>
-  <input mdInput placeholder="Enter name"
-  [(ngModel)]="newusername">
-</md-input-container>
-<md-input-container>
-  <input mdInput type="password" placeholder="Enter password"
-         [(ngModel)]="newpassword">
-</md-input-container>
-<fa [name]="'rocket'" [rotate]=270></fa>
-<button (click)="CreateUser()">
-  Add User
-</button>
-<button (click)="ClearUsers()">
-  Clear
-</button>
+<form (ngSubmit)="createUser()">
+  <md-input-container>
+    <input required name="nameInput" mdInput placeholder="Enter name" [(ngModel)]="newUser.username">
+  </md-input-container>
+  <md-input-container>
+    <input name="passwordInput" mdInput type="password" placeholder="Enter password" [(ngModel)]="newUser.password">
+  </md-input-container>
+  <fa [name]="'rocket'" [rotate]=270></fa>
+  <button name="submitButton" type="submit">
+    Add User
+  </button>
+  <button name="clearButton" type="button" md-button (click)="clearUsers()">
+    Clear
+  </button>
+</form>
 <fa [name]="'rocket'"></fa>
   <md-card *ngFor="let user of users">
-    <h1 style="color: brown"><fa [name]="'user'"></fa>{{user.username}}</h1>
+    <h1 style="color: brown"><fa [name]="iconName"></fa>{{user.username}}</h1>
   </md-card>
+<md-input-container>
+  <input mdInput [(ngModel)]="iconName">
+</md-input-container>
 
 

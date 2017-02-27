@@ -22,7 +22,8 @@ import { EditViewComponent } from './menu/edit/edit-view.component';
 const routes: Routes = [
   { path: 'users', component: UsersComponent },
   {path: 'home', component: HomeComponent},
-  {path: 'menu', component: MenuComponent}
+  {path: 'menu', component: MenuComponent},
+  {path: 'menu/create', component: CreateComponent}
 ]
 
 @NgModule({

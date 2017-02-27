@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MenuItem} from "../menu-item";
 
 @Component({
   selector: 'bf-create',
@@ -6,13 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
-  createMenu()
+  createMenuSmart( menu: MenuItem)
   {
-    alert("pnis");
+    console.log('menu:', menu);
   }
 
 

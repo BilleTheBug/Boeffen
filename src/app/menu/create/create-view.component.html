@@ -1,15 +1,20 @@
+<h2>Ny Menu</h2>
 <form (ngSubmit)="create()">
   <md-input-container>
     <input name="title" required mdInput placeholder="Title" [(ngModel)]="newItem.Title">
   </md-input-container>
+  <br>
   <md-input-container>
     <input name="description" required mdInput placeholder="Description" [(ngModel)]="newItem.Description">
   </md-input-container>
+  <br>
   <md-input-container>
     <input name="price" required mdInput type="number" placeholder="Price" [(ngModel)]="newItem.Price">
   </md-input-container>
+  <br>
   <md-input-container>
     <input name="imagePath" required mdInput placeholder="Image path" [(ngModel)]="newItem.ImagePath">
   </md-input-container>
+  <br>
   <button name="createBtn" md-button type="submit">Opret</button>
 </form>

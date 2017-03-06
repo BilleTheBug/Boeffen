@@ -7,8 +7,14 @@ import {MenuItem} from "../menu-item";
   styleUrls: ['menu-view.component.css']
 })
 export class MenuViewComponent implements OnInit {
-
-  constructor() { }
+  menus : MenuItem[];
+  constructor() {
+    this.menus = JSON.parse(localStorage.getItem("menus"));
+    if (this.menus === null)
+    {
+      this.menus = [];
+    }
+  }
 
   ngOnInit() {
   }

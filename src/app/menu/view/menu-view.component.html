@@ -1,5 +1,8 @@
-<p>
-  menu-view works!
-</p>
+<md-card *ngFor="let menuItem of menus">
+  <h3>{{menuItem.Title}}</h3>
+  <h4>{{menuItem.Description}}</h4>
+  <h4>{{menuItem.Price}}DDK</h4>
+  <img src="{{menuItem.ImagePath}}">
 
+</md-card>
 <button md-button routerLink="create">Opret Ny Menu</button>

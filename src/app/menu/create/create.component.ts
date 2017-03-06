@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MenuItem} from "../menu-item";
 import {_localeFactory} from "@angular/core/src/application_module";
 import {RouterLink, Router} from "@angular/router";
+import {timestamp} from "rxjs/operator/timestamp";
 
 @Component({
   selector: 'bf-create',
@@ -24,6 +25,7 @@ export class CreateComponent implements OnInit {
 
   createMenuSmart( menu: MenuItem)
   {
+    menu.Id = this.menus.length + Date.now().toString();
     this.menus.push(menu);
     localStorage.setItem("menus", JSON.stringify(this.menus));
     this.router.navigate(['menu']);

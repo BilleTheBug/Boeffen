@@ -1,8 +1,17 @@
+<button md-button routerLink="create">Opret Ny Menu</button>
+<button md-button (click)="wipe()">Wipe</button>
+
 <md-card *ngFor="let menuItem of menus">
+  <div style="display: inline">
+    <fa [name]="'window-close'" routerLink="delete/{{menuItem.Id}}"></fa>
+  </div>
+  <div style="display: inline">
   <h3>{{menuItem.Title}}</h3>
   <h4>{{menuItem.Description}}</h4>
   <h4>{{menuItem.Price}}DDK</h4>
   <img src="{{menuItem.ImagePath}}">
+  </div>
+
 
 </md-card>
-<button md-button routerLink="create">Opret Ny Menu</button>
+

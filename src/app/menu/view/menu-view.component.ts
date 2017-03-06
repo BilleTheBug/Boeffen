@@ -18,5 +18,11 @@ export class MenuViewComponent implements OnInit {
 
   ngOnInit() {
   }
+  wipe()
+  {
+    this.menus = [];
+    localStorage.setItem("menus", JSON.stringify(this.menus));
+
+  }
 
 }

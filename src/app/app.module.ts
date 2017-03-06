@@ -23,7 +23,8 @@ const routes: Routes = [
   { path: 'users', component: UsersComponent },
   {path: 'home', component: HomeComponent},
   {path: 'menu', component: MenuComponent},
-  {path: 'menu/create', component: CreateComponent}
+  {path: 'menu/create', component: CreateComponent},
+  {path: 'menu/delete/:id', component: DeleteComponent}
 ]
 
 @NgModule({
